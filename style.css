@@ -1,0 +1,344 @@
+/*Importando fontes*/
+@font-face {
+    font-family: "Inter";
+    src: url("fonts/inter.woff");
+}
+@font-face {
+    font-family: "SF-Pro";
+    src: url("fonts/SFPRODISPLAYBOLD.woff");
+}
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #171717;
+    font-family: Inter;
+    color: #FAFAF9;
+}
+
+#container{
+    width: calc(100% - 128px);
+    margin: auto;
+}
+/*Estilizando area de navegacao*/
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top:50px;
+}
+nav > span{
+    font-weight: 700;
+    font-size: 16px;
+
+}
+
+nav > ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+nav > ul > li{
+    margin: 0 15px;
+}
+nav > ul > li > a{
+    text-decoration: none;
+    color: #FAFAF9;
+    font-weight: 400;
+    font-size: 12px;
+}
+a:hover{
+    cursor:pointer;
+}
+
+/*Estilizando conteudo principal*/
+main{
+    margin-top: 180px;
+}
+#title{
+    font-family: SF-Pro;
+    font-weight: 800;
+    font-size: 172px;
+    letter-spacing: -2px;
+    color: #FAFAF9;
+}
+main > img{
+    position: absolute;
+    z-index: 1;             /*Fazendo imagem sobrepor o titulo*/
+    top: 320px;
+    left: 770px;
+    background: none;
+}
+main > p{
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    color: #efede8c9;
+}
+main > button{
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 600;
+    font-size: 18px;
+    left: 1px;
+    padding: 24px 25px;
+    background-color: #E6533C;
+    border-radius: 10px;
+    margin-top: 54px;
+    border: 1px transparent;
+}
+
+main > button:hover{
+    background-color: #e23a20;
+    cursor: pointer;
+}
+p{
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    color: #efede8c9;
+}
+
+/*Estilizando os items suspensos*/
+#item-1{
+    display: flex;
+    flex-direction: row;
+    background-color: #303030;
+    border-radius: 12px;
+    padding: 20px 23px;
+    position: absolute;
+    z-index: 2;                /*Fazendo items supensos sobrepondo imagem e titulo*/
+    left: 650px;
+    top: 688px;
+    transition: .6s;
+}
+#item-1 > span > h3{
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 0.3px;
+    background-color: #303030;
+}
+#item-1 > span > p{
+    background-color: #303030;
+}
+#playBtn{
+    width: 40px;
+    height: 40px;
+    background-color: #E6533C;
+    border-radius: 50%;
+    display: block;
+    margin-right: 12px;
+}
+#playBtn > img{
+    background: none;
+    margin: 30% 40%;
+}
+
+
+#item-2{
+    display: inline-block;
+    padding: 17px 24px;
+    background-color: #7A29DC;
+    border-radius: 12px;
+    position: absolute;
+    z-index: 2;
+    left: 1110px;
+    top:800px;
+    transition: .6s;
+}
+#item-2 > h3{
+    font-weight: 600;
+    font-size: 40px;
+    letter-spacing: 1px;
+    background-color: #7A29DC;
+}
+#item-2 > p{
+    background-color: #7A29DC;
+}
+
+#item-3{
+    padding: 14px 25px;
+    background-color: #EF8964;
+    border-radius: 12px;
+    display: inline-block;
+    position: absolute;
+    z-index: 2;
+    left: 1065px;
+    top: 295px;
+    transition: .6s;
+}
+#circle{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #EFA082;
+
+}
+#circle > img{
+    background: none;
+    width: 16px;
+    height: 16px;
+    margin-left: 20%;
+    margin-top: 15%;
+    filter: invert(100%);
+}
+#item-3 > p{
+    font-weight: 700;
+    font-size: 48px;
+    letter-spacing: -5px;
+    color: #FAFAF9;
+    background-color: #EF8964;
+
+}
+#item-3 > p > a{
+    text-decoration: none;
+    margin-left: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    color: #EFEDE8A6;
+    background-color: #EF8964;
+}
+
+/*Estilizando parte de baixo do conteudo principal*/
+#footer{
+    margin-top: 115px;
+}
+#footer > p{
+    margin-bottom: 20px;
+}
+
+/*Estilizando area de cards*/
+#cards{
+    margin-top: 200px;
+}
+
+#cards > h3{
+    font-weight: 600;
+    font-size: 40px;
+}
+#cards > p{
+    margin-top: 24px;
+    margin-bottom: 50px;
+}
+#cards > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.card{
+    width: 304px;
+    height: 190px;
+    display: block;
+    margin-right: 20px;
+}
+.A, .A > h5 , .A > p{
+    background-color: #323443; /*Interpolacao de cores entre cards*/
+}
+.B, .B > h5, .B > p{
+    background-color: #232532;
+}
+#cards:last-child{
+    margin-right: 0;
+}
+.card{
+    box-sizing: border-box;
+    padding-left: 40px;
+    padding-top: 50px;
+    border-radius: 12px;
+}
+.card > h5{
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+.card > p{
+    display: inline;
+
+}
+.card > img{
+    background: none;
+    display: inline;
+    margin-left: 210px;
+    margin-top: 20px;
+}
+
+/*Estilizando area de conteudos*/
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 64px;
+}
+.text > h2{
+    font-weight: 600;
+    font-size: 50px;
+    letter-spacing: 0.83px;
+    margin-bottom: 38px;
+}
+.text > p{
+    margin-bottom: 24px;
+}
+
+.text > a{
+    text-decoration: none;
+    color: #0070C9;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+.text > a > img{
+    margin-left: 8px;
+}
+
+#contents{
+    margin-top: 189px;
+}
+
+
+/*Estilizando area de assinaturas*/
+#membership{
+    margin-top: 200px;
+}
+#membership >h2{
+    font-weight: 500;
+    font-size: 50px;
+    margin-bottom: 12px;
+    letter-spacing: 0.83px;
+}
+#membership > hr{
+    color: #ffffffb4;
+    margin-bottom: 32px;
+}
+#membership > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+.type:last-child{
+    background-color: #323443;
+}
+
+.type{
+    background-color: #232532;
+    padding: 68px;
+}
+.type > h3{
+    font-weight: 600;
+    font-size: 40px;
+    letter-spacing: 0.3px;
+    margin-bottom: 34px;
+    background: none;
+}
+.type > p{
+    margin-bottom: 16px;
+    background: none;
+}
+.type > ul{
+    background: none;
+}
+.type > ul > li{
+    color: #efede8c9;
+    background: none;
+}

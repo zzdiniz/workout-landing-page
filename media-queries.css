@@ -1,0 +1,167 @@
+@media (max-width:1200px){/*Breakpoint*/
+    main > img{
+        display: none;
+    }
+    #item-1{
+        left: 788px;
+        top: 461px;
+    }
+    #item-2{
+        left: 787px;
+        top:559px;
+    }
+    #item-3{
+        left: 790px;
+        top:340px
+    }
+    .card{
+        width: 250px;
+    }
+    .card > img{
+        margin-left: 80%;
+        margin-top: inherit;
+    }
+}
+
+@media (max-width:995px){/*Breakpoint*/
+    #title{
+        font-size: 140px;
+    }
+    #item-1,#item-2,#item-3{
+        display: none;
+    }
+    .card{
+        padding-left: 5px;
+        padding-top: 10px;
+    }
+    .content > img{
+        width: 90%;
+        height: 90%;
+        min-width: 389px;
+        display: inline;
+    }
+    .text > h2{
+        font-size: 35px;
+    }
+}
+@media (max-width:770px){/*Breakpoint*/
+    #container{
+        width: 100%;
+        margin: 10px;
+    }
+    #title{
+        font-size: 120px;
+    }
+}
+
+@media (max-width :620px){/*Breakpoint*/
+    #container{
+       box-sizing: border-box;
+       margin:0;
+    }
+
+        /*Estilizando area de navegacao*/
+    nav{
+        flex-direction: column; 
+        width: 100%;
+    }
+    nav > ul{                       /*Transformando menu horizontal em vertical*/
+        flex-direction: column;
+        margin-top: 50px;
+        height: 0px;                /*Inicia escondido*/
+        overflow-y: hidden;
+        transition: .6s;
+    }
+    #list.active{
+        height: 222px;              /*Se apertar o botao ele expande*/
+    }
+    nav > ul > li{
+        margin-top: 6px;
+        padding: 5px;
+        border:1px solid white;
+    }
+    nav > ul > li > a{
+        transition: .3s;
+    }
+    nav > ul > li > a:hover{        /*Aumenta de tamanho quando passa o mouse*/
+        font-weight: 700;
+        font-size: 13px;
+    }
+    #logo{                          /*Transformando logo em botao*/
+        align-self: flex-end;
+        margin-right: 5px;
+        padding: 10px 15px;
+        border:3px solid #FAFAF9;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: .3s;
+        position: absolute;
+    }
+    #logo:hover{                    /*Aumenta de tamanho quando passa o mouse*/
+        background-color: #FAFAF9;
+        color: black;
+        font-size: 18px;
+    }
+    /**/
+    main{
+        margin-top: 50px;
+    }
+    main > button{
+        display: block;
+        margin: 15px auto;
+    }
+    
+    /*Estilizando area principal*/
+    #title{
+        font-size: 86px;
+        text-align: center;
+    }
+    #footer{
+        width: 100%;
+    }
+    #footer > img{
+        width: 440px;
+    }
+
+    /*Estilizando area de cards*/
+    #cards{
+        width: 100%;
+    }
+    #cards > div{
+        flex-direction: column;
+    }
+    .card{
+        width: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+    .card > img{
+        width: 26px;
+        height: 22px;
+    }
+
+    /*estilizando area de conteudos*/
+    .content{
+        flex-direction: column;
+    }
+    .content > img{
+        display: block;
+        margin:  10px auto;
+    }
+    .text > a{
+        display:block;
+        text-align: right;
+        margin-right: 10px;
+    }
+
+    /*Estilizando area de assinaturas*/
+    #membership > div{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .type{
+        margin-top:10px;
+    }
+}
